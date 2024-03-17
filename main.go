@@ -7,6 +7,7 @@ import (
 
 	"fmt"
 
+	"github.com/gin-contrib/gzip"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 )
@@ -16,8 +17,11 @@ func main() {
 
 	// Connect to database
 	models.ConnectDatabase()
+	models.InitContent()
+	models.InitParam()
 
 	r := gin.Default()
+	r.Use(gzip.Gzip(gzip.DefaultCompression))
 	r.Use(gin.Logger())
 	r.Delims("{{", "}}")
 

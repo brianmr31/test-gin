@@ -10,9 +10,13 @@ import (
 func Home(c *gin.Context) {
 	var content models.Content
 	content = models.GetContentByType("HOME")
-
+	youtube, logo, github, email := models.GetParamHome()
 	c.HTML(http.StatusOK, "public/index.tmpl", gin.H{
-		"title":   content.TITLE,
-		"content": content.CONTENT,
+		"title":   content.Title,
+		"content": content.Content,
+		"youtube": youtube,
+		"logo":    logo,
+		"github":  github,
+		"email":   email,
 	})
 }
