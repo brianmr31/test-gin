@@ -1,0 +1,4 @@
+google.golang.org/genproto v0.0.0-20240314234333-6e1732d8331c h1:1AVpelW1Ld8u6QbfPlwh00uAsR3xrnfn6FIJsCags3k=
+google.golang.org/genproto v0.0.0-20240314234333-6e1732d8331c/go.mod h1:/3XmxOjePkvmKrHuBy4zNFw7IzxJXtAgdpXi8Ll990U=
+google.golang.org/protobuf v1.33.0 h1:uNO2rsAINq/JlFpSdYEKIZ0uKD/R9cpdv0T+yoGwGmI=
+google.golang.org/protobuf v1.33.0/go.mod h1:c6P6GXX6sHbq/GpV6MGZEdwhWPcYBgnhAHhKbcUYpos=
