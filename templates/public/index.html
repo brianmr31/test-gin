@@ -1,0 +1,15 @@
+{{ define "public/index.tmpl" }}
+<html lang="en" data-bs-theme="dark">
+    {{ template "globals/head.tmpl" .}}
+    {{ template "globals/header.tmpl" .}}
+    <body class="container" >
+        <h1>
+            {{ .title }}
+        </h1>
+        <div>
+            {{ .content }}
+        </div>
+    </body>
+    {{ template "globals/footer.tmpl" .}}
+</html>
+{{ end }}

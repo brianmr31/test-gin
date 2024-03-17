@@ -3,6 +3,7 @@ package main
 import (
 	"controllers"
 	"models"
+	"net/http"
 
 	"fmt"
 
@@ -19,16 +20,18 @@ func main() {
 	r := gin.Default()
 	r.Use(gin.Logger())
 	r.Delims("{{", "}}")
-	// r.LoadHTMLGlob("templates/*.tmpl")
 
 	//load html file
-	r.LoadHTMLGlob("templates/**/*.tmpl")
+	r.LoadHTMLGlob("templates/**/*.html")
 
 	//static path
 	r.Use(static.Serve("/assets", static.LocalFile("./assets", false)))
 
+	r.GET("/", func(c *gin.Context) {
+		c.Redirect(http.StatusFound, "/index")
+	})
 	r.GET("/index", controllers.Home)
-	r.GET("/", controllers.Home)
+
 	r.Run(":8080")
 
 }

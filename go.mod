@@ -10,6 +10,11 @@ require (
 )
 
 require (
+	github.com/mattn/go-sqlite3 v1.14.17 // indirect
+	gorm.io/driver/sqlite v1.5.5 // indirect
+)
+
+require (
 	controllers v0.0.0-00010101000000-000000000000
 	github.com/bytedance/sonic v1.11.3 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect
